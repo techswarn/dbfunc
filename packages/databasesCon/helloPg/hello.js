@@ -1,14 +1,19 @@
 const { Client } = require('pg')
+const dotenv = require('dotenv')
 
-
+dotenv.config({path: './config.env'})
 
 function main(args) {
 
   const client = new Client({
-    host: 'db-postgresql-do-user-11648032-0.b.db.ondigitalocean.com',
-    port: 25060,
-    user: 'doadmin',
-    password: 'AVNS_0POAcotmgRBoXxPuetJ',
+    host: process.env.PG_HOST,
+    database: process.env.PG_DATABASE,
+    port: process.env.PG_PORT,
+    user: process.env.PG_USER,
+    password: process.env.PG_PASSWORD,
+    ssl: {
+      rejectUnauthorized: false
+    }
   })
 
   client.connect(err => {
@@ -20,9 +25,10 @@ function main(args) {
   })
   
 
-    let name = args.name || 'stranger'
-    let greeting = 'Hello ' + name + '!'
-    console.log(greeting)
-    return {"body": greeting}
+   // let name = args.name || 'stranger'
+   // let greeting = 'Hello ' + name + '!'
+    //console.log(greeting)
+    return {"body": "greeting"}
   }
+  main()
   
