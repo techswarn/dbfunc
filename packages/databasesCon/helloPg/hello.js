@@ -1,10 +1,10 @@
-const { Client } = require('pg')
-const dotenv = require('dotenv')
+// const { Client } = require('pg')
+// const dotenv = require('dotenv')
 
-dotenv.config({path: './config.env'})
+// dotenv.config({path: './config.env'})
 
 function main(args) {
-console.log(process.env)
+// console.log(process.env)
   // const client = new Client({
   //   host: process.env.PG_HOST,
   //   database: process.env.PG_DATABASE,
