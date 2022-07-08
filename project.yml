@@ -2,7 +2,7 @@ targetNamespace: ""
 parameters: {}
 packages:
   - name: databasesCon
-    environment: {}
+    environment: PG_DATABASE:"${PG_DATABASE}"
     parameters: {}
     annotations: {}
     actions:
