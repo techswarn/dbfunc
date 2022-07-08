@@ -32,7 +32,11 @@
 //   }
 
 //   exports.main = main
-  
+// PG_DATABASE: "${PG_DATABASE}"
+// PG_PORT: "${PG_PORT}"
+// PG_USER: "${PG_USER}"
+// PG_PASSWORD: "${PG_PASSWORD}"
+// PG_HOST: "${PG_HOST}"
 
 function main(args) {
   let name = args.name || 'stranger'
