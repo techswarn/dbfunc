@@ -1,0 +1,17 @@
+targetNamespace: ""
+parameters: {}
+packages:
+  - name: databasesCon
+    environment: {}
+    parameters: {}
+    annotations: {}
+    actions:
+      - name: helloPg
+        binary: false
+        main: ""
+        runtime: "nodejs:default"
+        web: true
+        parameters: {}
+        environment: {}
+        annotations: {}
+        limits: {}
