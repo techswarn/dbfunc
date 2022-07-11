@@ -1,5 +1,10 @@
 targetNamespace: ""
 parameters: {}
+environment:
+  DATABASE_PASSWORD: "${DATABASE_PASSWORD}"
+  DB_PASSWORD: "${DB_PASSWORD}"
+  DATABASE: "${DATABASE}"
+  NODE_ENV: "${NODE_ENV}"
 packages:
   - name: databasesCon
     environment: {}
@@ -20,3 +25,9 @@ packages:
           PG_PASSWORD: "${PG_PASSWORD}"
         annotations: {}
         limits: {}
+
+
+  - DATABASE_PASSWORD
+[dbfunc] [2022-07-11 03:21:16]      - DB_PASSWORD
+[dbfunc] [2022-07-11 03:21:16]      - NODE_ENV
+[dbfunc] [2022-07-11 03:21:16]      - DATABASE
