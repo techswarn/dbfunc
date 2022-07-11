@@ -12,6 +12,11 @@ packages:
         runtime: "nodejs:default"
         web: true
         parameters: {}
-        environment: {}
+        environment:
+          PG_HOST: "${PG_HOST}"
+          PG_DATABASE: "${PG_DATABASE}"
+          PG_PORT: "${PG_PORT}"
+          PG_USER: "${PG_USER}"
+          PG_PASSWORD: "${PG_PASSWORD}"
         annotations: {}
         limits: {}
