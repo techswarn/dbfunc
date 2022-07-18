@@ -1,10 +1,5 @@
 targetNamespace: ""
 parameters: {}
-environment:
-  DATABASE_PASSWORD: "${DATABASE_PASSWORD}"
-  DB_PASSWORD: "${DB_PASSWORD}"
-  DATABASE: "${DATABASE}"
-  NODE_ENV: "${NODE_ENV}"
 packages:
   - name: databasesCon
     environment: {}
@@ -17,11 +12,13 @@ packages:
         runtime: "nodejs:default"
         web: true
         parameters: {}
-        environment:
-          PG_HOST: "${PG_HOST}"
-          PG_DATABASE: "${PG_DATABASE}"
-          PG_PORT: "${PG_PORT}"
-          PG_USER: "${PG_USER}"
-          PG_PASSWORD: "${PG_PASSWORD}"
         annotations: {}
-        limits: {}
+        limits:
+          timeout: 5000
+          memory: 256
+environment:
+  PG_HOST: ${PG_HOST}
+  PG_DATABASE: ${PG_DATABASE}
+  PG_PORT: ${PG_PORT}
+  PG_USER: ${PG_USER}
+  PG_PASSWORD: ${PG_PASSWORD}
